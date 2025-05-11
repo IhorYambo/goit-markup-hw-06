@@ -15,7 +15,7 @@ li {
     list-style: none;
 }
 .container {
-    width: 1158px;
+    max-width: 1158px;
     margin: 0 auto;
     padding: 0 15px;
 }
@@ -52,13 +52,13 @@ img {
 }
 @media screen and (min-width: 1158px) {
     .section {
-        padding-top: 120px;
-        padding-bottom: 120px;
-
+      padding-top: 120px;
+      padding-bottom: 120px;
     }
-}
+  }
 /* #endregion head */
 /* #region header */
+
 .header {
     border-bottom: 1px solid #E7E9FC;
     box-shadow: 
@@ -82,9 +82,8 @@ img {
     margin-right: 76px;
 }
 .header .head-container {
-    display: flex;
+    display: block;
     align-items: center;
-    border-bottom: 1px solid #E7E9FC;
 }
 .page-nav {
     display: flex;
@@ -144,6 +143,72 @@ img {
     display: flex;
     gap: 40px;
 }
+.header-logo-box {
+    display: flex;
+    padding: 17px 1px;
+    justify-content: space-between;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+.header-button-mob {
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+.header-list-nav {
+    display: none;
+}
+
+@media screen and (min-width: 768px) {
+    .head-container {
+        display: flex;
+        justify-content: space-between;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    .page-nav {
+        display: flex;
+        align-items: center;
+    }
+    .header-logo-box {
+        padding: 0px;
+    }
+    .header-button {
+        display: none;
+    }
+    .header-button-mob {
+        border: none;
+        background-color: transparent;
+        cursor: pointer;
+    }
+    .list-nav {
+        display: flex;
+        gap: 40px;
+    }
+    .list-nav .link {
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 1.5;
+        letter-spacing: 0.02em;
+        color: #2e2f42;
+        display: block;
+        padding-top: 24px;
+        padding-bottom: 24px;
+        text-decoration: none;
+        position: relative;
+        transition: color 250mscubic-bezier(0.4, 0, 0.2, 1);
+        padding: 24px 0;
+    }
+}
+@media screen and (min-width: 1158px) {
+    .list-nav {
+        gap: 40px;
+    }
+    .list-nav .link {
+        padding-top: 24px;
+        padding-bottom: 24px;
+    }
+}
 /* #endregion header */
 /* #region section solutions */
 .sec-solutions {
@@ -161,7 +226,6 @@ img {
     margin-left: auto;
     margin-right: auto;
     background-size: cover;
-    
 }
 .sec-solutions .page-title {
     max-width: 496px;
@@ -205,15 +269,16 @@ img {
 .sec-advantages {
     padding: 120px 0;
 }
+.container-about {
+    max-width: 320px;
+}
 .sec-advantages .club-list {
     display: flex;
-    gap: 24px;
-}
-.sec-advantages .club-list .list {
-    flex-basis: calc((100% - 72px) / 4);
+    gap: 72px;
+    flex-wrap: wrap;
 }
 .con-adventages {
-    display: flex;
+    display: none;
     align-items: center;
     justify-content: center;
     background-color: #F4F4FD;
@@ -224,13 +289,98 @@ img {
     margin-bottom: 8px;
 }
 .club-list .title {
-    font-weight: 500;
-    font-size: 20px;
-    line-height: 1.2;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.11;
     letter-spacing: 0.02em;
-    color: #2E2F42;
+    text-transform: capitalize;
+    color: #2e2f42;
+    text-align: center;
     margin-bottom: 8px;
 }
+.club-list .text-list {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    color: #434455;
+    padding-left: 16px;
+    padding-right: 16px;
+}
+@media screen and (min-width: 768px) {
+    .container-about {
+        max-width: 768px;
+    }
+    .club-list {
+        row-gap: 72px;
+        column-gap: 24px;
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .club-list .list {
+        width: calc((100% - 24px) / 2);
+    }
+    .con-adventages {
+        display: none;
+    }
+    .club-list .title {
+        font-weight: 700;
+        font-size: 36px;
+        line-height: 1.11;
+        letter-spacing: 0.02em;
+        text-transform: capitalize;
+        text-align: left;
+        color: #2e2f42;
+        padding-left: 16px;
+        padding-right: 16px;
+        margin-bottom: 8px;
+    }
+    .club-list .text-list {
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 1.5;
+        letter-spacing: 0.02em;
+        color: #434455;
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+}
+@media screen and (min-width: 1158px) {
+    .container-about {
+        max-width: 1158px;
+    }
+    .club-list {
+        display: flex;
+        gap: 24px;
+    }
+    .club-list .list {
+        width: calc((100% - 72px) / 4);
+    }
+    .con-adventages {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 112px;
+        background-color: #f4f4fd;
+        border-radius: 4px;
+        border: 1px solid #8e8f99;
+        margin-bottom: 8px;
+    }
+    .club-list .title {
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 1.2;
+        gap: 24px;
+        margin-bottom: 8px;
+    }
+    .club-list .text-list {
+        line-height: 1.5;
+        letter-spacing: 0.02em;
+        color: #434455;
+    }
+}
+    
+    
 /* #endregion adventages */
 /* #region our team */
 .sec-team {
@@ -257,7 +407,7 @@ img {
 }
 .sec-team .list {
     background-color: #FFFFFF;
-
+    max-width: 264px;
     flex-basis: calc((100% - 72px) / 4);
     border-radius: 0px 0px 4px 4px;
         box-shadow: 0 2px 1px 0 rgba(46, 47, 66, 0.08),
@@ -318,6 +468,14 @@ img {
 .icon:focus { 
     fill: #404BBF;
 }
+@media screen and (max-width: 320px) {
+    .page-listing {
+    flex-direction: column;
+    gap: 72px;
+    align-items: center;
+    margin: 0 auto;
+    }
+}
 /* #endregion our team */
 /* #region Portfolio */
 .sec-portfolio {
@@ -336,7 +494,8 @@ img {
     border-top: none;
 }
 .sec-portfolio .club-list .page-list {
-transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    max-width: 288px;
+    transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .sec-portfolio .club-list .page-list .ovrlay {
     max-width: 360px;
@@ -365,6 +524,9 @@ transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .sec-portfolio .club-list .page-list:hover .text-ovrlay {
     transform: translateY(0)
+}
+@media screen and (max-width: 768px) {
+
 }
 /* #endregion Portfolio */
 /* #region footer */
@@ -478,9 +640,6 @@ transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
     top: 0;
     transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
     background-color: rgba(46, 47, 66, 0.4);
-    /* opacity: 0;
-    visibility: hidden;
-    pointer-events: none; */
 }
 .backdrop:not(.is-open) .modal {
     transform: translate(-50%, -50%) scale (1.5);
