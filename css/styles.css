@@ -82,7 +82,7 @@ img {
     margin-right: 76px;
 }
 .header .head-container {
-    display: block;
+    display: flex;
     align-items: center;
 }
 .page-nav {
@@ -199,6 +199,9 @@ img {
         transition: color 250mscubic-bezier(0.4, 0, 0.2, 1);
         padding: 24px 0;
     }
+    .header-button {
+        display: none;
+    }
 }
 @media screen and (min-width: 1158px) {
     .list-nav {
@@ -274,7 +277,7 @@ img {
 }
 .sec-advantages .club-list {
     display: flex;
-    gap: 72px;
+    gap: 24px;
     flex-wrap: wrap;
 }
 .con-adventages {
@@ -287,6 +290,9 @@ img {
     width: 264px;
     height: 112px;
     margin-bottom: 8px;
+}
+.club-list .list {
+    margin-bottom: 72px;
 }
 .club-list .title {
     font-weight: 700;
@@ -319,6 +325,7 @@ img {
     }
     .club-list .list {
         width: calc((100% - 24px) / 2);
+        margin-bottom: 72px;
     }
     .con-adventages {
         display: none;
@@ -344,6 +351,27 @@ img {
         padding-left: 16px;
         padding-right: 16px;
     }
+    .page-address {
+        font-style: normal;
+        display: block;
+    }
+    .listing-address {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        padding: 16px;
+    }
+    .listing-address .link {
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 1.16667;
+        letter-spacing: 0.04em;
+        color: #434455;
+        display: block;
+        text-decoration: none;
+        font-style: normal;
+        transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    }
 }
 @media screen and (min-width: 1158px) {
     .container-about {
@@ -355,6 +383,7 @@ img {
     }
     .club-list .list {
         width: calc((100% - 72px) / 4);
+        margin-bottom: 72px;
     }
     .con-adventages {
         display: flex;
@@ -377,6 +406,15 @@ img {
         line-height: 1.5;
         letter-spacing: 0.02em;
         color: #434455;
+    }
+    .listing-address {
+        flex-direction: row;
+        gap: 40px;
+        padding: 0;
+    }
+    .listing-address .link {
+        padding-top: 24px;
+        padding-bottom: 24px;
     }
 }
     
@@ -494,7 +532,7 @@ img {
     border-top: none;
 }
 .sec-portfolio .club-list .page-list {
-    max-width: 288px;
+    max-width: 360px;
     transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .sec-portfolio .club-list .page-list .ovrlay {
@@ -860,3 +898,109 @@ img {
     background-color: #404bbf;
 }
 /* #endregion Modal */
+/* #region mob */
+.mob-menu {
+    width: 100%;
+    background-color: #fff;
+    position: fixed;
+    top: 0;
+    z-index: 1;
+    padding: 89px 9px 40px 1px;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    display: flex;
+    height: 100%;
+}
+.menu-open-button {
+    background-color: #e7e9fc;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    padding: 0;
+    border-radius: 4px;
+    width: 24px;
+    height: 24px;
+    position: absolute;
+    top: 24px;
+    right: 24px;
+    border-radius: 50%;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+     border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.mob-menu-list {
+    display: flex;
+    flex-direction: column;
+    row-gap: 40px;
+    padding-left: 8px;
+}
+.mob-link {
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.11111;
+    letter-spacing: 0.02em;
+    text-transform: capitalize;
+    color: #2e2f42;
+    margin-bottom: 40px;
+}
+.mob-address {
+    padding-left: 15px;
+}
+.mob-address-list {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    margin-bottom: 48px;
+}
+.mob-address {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 1.2;
+    letter-spacing: 0.02em;
+    color: #4d5ae5;
+}
+.mob-phone {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 1.2;
+    letter-spacing: 0.02em;
+    color: #434455;
+}
+.mob-media {
+    display: flex;
+    gap: 40px;
+}
+.mob-media-item {
+    width: 40px;
+    height: 40px;
+}
+.mob-icon-link {
+    width: 100%;
+    height: 100%;
+    background-color: #4d5ae5;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.mob-icon {
+    fill: #F4F4FD;
+}
+@media screen and (min-width: 768px) {
+    .mob-menu {
+        display: none;
+    }
+    .mob-menu-list {
+        display: flex;
+        gap: 40px;
+    }
+}
+@media screen and (min-width: 1158px) {
+    .mob-menu-list {
+        gap: 40px;
+    }
+}
+/* #endregion mob */
