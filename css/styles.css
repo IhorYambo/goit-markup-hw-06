@@ -123,6 +123,7 @@ img {
     background-color: #404BBF;
 }
 .page-address {
+    display: none;
     font-style: normal;
     justify-content: flex-end;
 }
@@ -158,7 +159,9 @@ img {
 .header-list-nav {
     display: none;
 }
-
+.header-button {
+    margin-left: auto;
+}
 @media screen and (min-width: 768px) {
     .head-container {
         display: flex;
@@ -185,6 +188,9 @@ img {
         display: flex;
         gap: 40px;
     }
+    .page-address {
+        display: block;
+    }
     .list-nav .link {
         font-weight: 500;
         font-size: 16px;
@@ -210,6 +216,9 @@ img {
     .list-nav .link {
         padding-top: 24px;
         padding-bottom: 24px;
+    }
+    .page-address {
+        display: flex;
     }
 }
 /* #endregion header */
