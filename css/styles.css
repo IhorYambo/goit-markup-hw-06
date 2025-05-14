@@ -694,6 +694,9 @@ img {
     }
 }
 @media screen and (min-width: 1158px) {
+    .sec-portfolio .container {
+        max-width: 1158px;
+    }
     .sec-portfolio {
         padding: 120px 0;
     }
@@ -821,6 +824,7 @@ img {
 }
 @media screen and (min-width: 768px) {
     .sec-footer .container {
+        max-width: 768px;
         display: flex;
         align-items: baseline;
         flex-wrap: wrap;
@@ -854,6 +858,7 @@ img {
 }
 @media screen and (min-width: 1158px) {
     .sec-footer .container {
+        max-width: 1158px;
         display: flex;
         gap: 0;
     }
