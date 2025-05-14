@@ -79,7 +79,6 @@ img {
     display: flex;
     align-items: center;
     justify-content: flex-start;
-    margin-right: 76px;
 }
 .header .head-container {
     position: relative;
@@ -151,11 +150,14 @@ img {
     justify-content: space-between;
     padding-right: 15px;
     padding-left: 15px;
+    margin-right: 76px;
 }
 .header-button-mob {
     border: none;
     background-color: transparent;
     cursor: pointer;
+    position: absolute;
+    right: 16px;
 }
 .header-list-nav {
     display: none;
@@ -210,7 +212,7 @@ img {
         transition: color 250mscubic-bezier(0.4, 0, 0.2, 1);
         padding: 24px 0;
     }
-    .header-button {
+    .header-button-mob {
         display: none;
     }
 }
@@ -236,7 +238,7 @@ img {
          rgba(46, 47, 66, 0.7)
          ),
          url(../images/people-office-mob-x1.jpg);
-    padding: 188px 0;
+    padding: 72px 0;
     background-repeat: no-repeat;
     background-position: center;
     max-width: 1440px;
@@ -245,15 +247,14 @@ img {
     background-size: cover;
 }
 .sec-solutions .page-title {
-    max-width: 496px;
+    max-width: 216px;
     font-weight: 700;
-    font-size: 56px;
+    font-size: 36px;
     line-height: 1.07;
     letter-spacing: 0.02em;
     text-align: center;
     color: #FFFFFF;
-
-    margin-bottom: 48px;
+    margin-bottom: 72px;
     margin-left: auto;
     margin-right: auto;
 }
@@ -287,7 +288,7 @@ img {
         rgba(46, 47, 66, 0.7),
         rgba(46, 47, 66, 0.7)
         ),
-        url("../images/people-office-mob-2x.jpg");
+        url("../images/people-office-mob-x2.jpg");
     }
 }
   @media screen and (min-width: 768px) {
@@ -297,6 +298,7 @@ img {
         rgba(46, 47, 66, 0.7)
         ),
         url("../images/people-office-tab-x1.jpg");
+        padding: 112px 0;
     }
     @media screen and (min-resolution: 2x) {
         .sec-solutions {
@@ -307,6 +309,18 @@ img {
             url("../images/people-office-tab-x2.jpg");
         }
     }
+    .sec-solutions .page-title {
+        max-width: 496px;
+        font-weight: 700;
+        font-size: 56px;
+        line-height: 1.07;
+        letter-spacing: 0.02em;
+        text-align: center;
+        color: #FFFFFF;
+        margin-bottom: 48px;
+        margin-left: auto;
+        margin-right: auto;
+    }
 }
 @media screen and (min-width: 1158px) {
     .sec-solutions {
@@ -315,6 +329,7 @@ img {
         rgba(46, 47, 66, 0.7)
         ),
         url("../images/people-office-desktop-x1.jpg");
+        padding: 188px 0;
     }
     @media screen and (min-resolution: 2x) {
         .sec-solutions {
@@ -325,18 +340,30 @@ img {
             url("../images/people-office-desktop-x2.jpg");
         }
     }
+    .sec-solutions .page-title {
+        max-width: 496px;
+        font-weight: 700;
+        font-size: 56px;
+        line-height: 1.07;
+        letter-spacing: 0.02em;
+        text-align: center;
+        color: #FFFFFF;
+        margin-bottom: 48px;
+        margin-left: auto;
+        margin-right: auto;
+    }
 }
 /* #endregion section solutions */
 /* #region adventages */
 .sec-advantages {
-    padding: 120px 0;
+    padding: 96px 0;
 }
 .container-about {
     max-width: 320px;
 }
 .sec-advantages .club-list {
     display: flex;
-    gap: 24px;
+    gap: 72px;
     flex-wrap: wrap;
 }
 .con-adventages {
@@ -349,9 +376,6 @@ img {
     width: 264px;
     height: 112px;
     margin-bottom: 8px;
-}
-.club-list .list {
-    margin-bottom: 72px;
 }
 .sec-advantages .club-list .title {
     font-weight: 700;
@@ -369,39 +393,35 @@ img {
     line-height: 1.5;
     letter-spacing: 0.02em;
     color: #434455;
-    padding-left: 16px;
-    padding-right: 16px;
 }
 @media screen and (min-width: 768px) {
     .container-about {
         max-width: 768px;
     }
-    .club-list {
-        row-gap: 72px;
+    .sec-advantages .club-list {
+        gap: 72px 24px;
         column-gap: 24px;
         display: flex;
         flex-wrap: wrap;
     }
     .club-list .list {
         width: calc((100% - 24px) / 2);
-        margin-bottom: 72px;
+        gap: 72px;
     }
     .con-adventages {
         display: none;
     }
-    .con-adventages .club-list .title {
+    .sec-advantages .club-list .title {
         font-weight: 700;
         font-size: 36px;
         line-height: 1.11;
         letter-spacing: 0.02em;
         text-transform: capitalize;
-        text-align: left;
+        text-align: start;
         color: #2e2f42;
-        padding-left: 16px;
-        padding-right: 16px;
         margin-bottom: 8px;
     }
-    .con-adventages .club-list .text-list {
+     .con-adventages .club-list .text-list {
         font-weight: 500;
         font-size: 16px;
         line-height: 1.5;
@@ -433,16 +453,18 @@ img {
     }
 }
 @media screen and (min-width: 1158px) {
+    .sec-advantages {
+    padding: 120px 0;
+    }
     .container-about {
         max-width: 1158px;
     }
-    .club-list {
+    .sec-advantages .club-list {
         display: flex;
         gap: 24px;
     }
     .club-list .list {
         width: calc((100% - 72px) / 4);
-        margin-bottom: 72px;
     }
     .con-adventages {
         display: flex;
@@ -483,7 +505,7 @@ img {
 /* #region our team */
 .sec-team {
     background-color: #F4F4FD;
-    padding: 120px 0;
+    padding: 96px 0;
 }
 .sec-title {
     font-weight: 700;
@@ -567,24 +589,10 @@ img {
 .icon:focus { 
     fill: #404BBF;
 }
-@media screen and (min-resolution: 2x) {
-    .sec-solutions {
-      background-image: linear-gradient(
-        rgba(46, 47, 66, 0.7),
-        rgba(46, 47, 66, 0.7)
-        ),
-        url("../images/people-office-mob-2x.jpg");
+@media screen and (min-width: 768px) {
+    .sec-team {
+        padding: 96px 0;
     }
-}
-/* @media screen and (max-width: 320px) {
-    .page-listing {
-    flex-direction: column;
-    gap: 72px;
-    align-items: center;
-    margin: 0 auto;
-    }
-} */
-@media (min-width: 768px) {
     .sec-team .container {
         max-width: 768px;
         margin-left: auto;
@@ -598,6 +606,9 @@ img {
     }
 }
 @media (min-width: 1158px) {
+    .sec-team {
+        padding: 120px 0;
+    }
     .sec-team .container {
         min-width: 1158px;
         margin-left: auto;
@@ -610,7 +621,7 @@ img {
 /* #endregion our team */
 /* #region Portfolio */
 .sec-portfolio {
-    padding: 120px 0 120px 0;
+    padding: 96px 0;
 }
 .sec-portfolio .club-list {
     flex-direction: row;
@@ -683,6 +694,9 @@ img {
     }
 }
 @media screen and (min-width: 1158px) {
+    .sec-portfolio {
+        padding: 120px 0;
+    }
     .images-portfolio {
         width: 360px;
         height: 300px;
@@ -709,30 +723,31 @@ img {
     flex-direction: column;
     gap: 72px;
 }
+.con-logo {
+    margin: 0 auto;
+}
 .logo-foot {
     font-weight: 700;
     color: #F4F4FD;
 }
 .sec-footer .logo {
     margin-bottom: 16px;
-    display: inline-block;
+    justify-content: center;
 }
 .sec-footer .text-list {
     color: #F4F4FD;
     max-width: 264px;
 }
-/* .con-icon {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-} */
+.con-icon {
+    margin: 0 auto;
+}
 .text-icon {
     font-weight: 500;
     font-size: 16px; 
     line-height: 1.5;
     letter-spacing: 0.02em;
     color: #FFFFFF;
-
+    text-align: center;
     margin-bottom: 16px;
 }
 .con-icon .icon-link:hover,
@@ -750,7 +765,7 @@ img {
     display: flex;
     justify-content: end;
     flex-direction: column;
-    /* margin-left: 80px; */
+    margin: 0 auto;
 }
 .text-subscribe {
     font-weight: 500;
@@ -759,6 +774,7 @@ img {
     letter-spacing: 0.02em;
     color: #ffffff;
     margin-bottom: 16px;
+    text-align: center;
 }
 .form-subscribe {
     display: flex;
@@ -809,20 +825,45 @@ img {
         align-items: baseline;
         flex-wrap: wrap;
         flex-direction: row;
+        gap: 72px 24px;
+    }
+    .sec-footer .logo {
+        justify-content: start;
+    }
+    .text-subscribe {
+        text-align: start;
+    }
+    .form-subscribe {
+        display: flex;
+        gap: 24px;
+        flex-direction: row;
+}
+    .con-logo {
+        justify-content: start;
+        margin: 0;
+    }
+    .con-icon {
+        margin: 0;
+    }
+    .con-subscribe {
+        margin: 0;
+    }
+    .text-icon {
+        text-align: start;
     }
 }
 @media screen and (min-width: 1158px) {
     .sec-footer .container {
         display: flex;
-        /* align-items: baseline; */
-        justify-content: space-between;
+        gap: 0;
     }
     .con-logo {
         display: block;
-        margin-right: 24px;
+        margin-right: 120px;
     }
     .con-icon {
         align-items: baseline;
+        margin-right: 80px;
     }
 }
 /* #endregion footer */
@@ -1054,24 +1095,6 @@ img {
     background-color: #404bbf;
 }
 @media screen and (min-width: 320px) {
-    .con-logo {
-        margin-left: auto;
-        margin-right: auto;
-    }
-    .con-icon {
-        margin-left: auto;
-        margin-right: auto;
-    }
-    .text-icon {
-        text-align: center;
-    }
-    .text-subscribe {
-        text-align: center;
-    }
-    .con-subscribe {
-        margin-left: auto;
-        margin-right: auto;
-    }
     .subscribe-button {
         margin-left: auto;
         margin-right: auto;
@@ -1088,7 +1111,7 @@ img {
 /* #endregion Modal */
 /* #region mob */
 .mob-menu {
-    row-gap: 168px;
+    margin-bottom: auto;
     flex-direction: column;
     width: 100%;
     background-color: #fff;
